@@ -22,7 +22,7 @@ namespace LayoutLab
         }
 		public AlignmentGridPage()
 		{
-            
+            BackgroundColor = Color.White;
 
 			Grid grid = new Grid
             {

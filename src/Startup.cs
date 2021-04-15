@@ -19,8 +19,12 @@ namespace LayoutLab
 				})
 				#endif
 				#if __IOS__
-				.ConfigureMauiHandlers(handlers => handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.BoxView), 
-					typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.BoxRenderer)))
+				.ConfigureMauiHandlers(handlers => {
+					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.BoxView), 
+					typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.BoxRenderer));
+					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.Frame), 
+					typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.FrameRenderer));
+				})
 				#endif
 				.UseMauiApp<App>();
 		}

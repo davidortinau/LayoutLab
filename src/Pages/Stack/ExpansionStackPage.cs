@@ -7,6 +7,7 @@ namespace LayoutLab
 	{
 		public ExpansionStackPage()
 		{
+			BackgroundColor = Color.White;
 			this.Content = new StackLayout
 			{
 				Margin = new Thickness(20),

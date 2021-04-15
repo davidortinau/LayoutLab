@@ -7,6 +7,7 @@ namespace LayoutLab
 	{
 		public SpacingGridPage()
 		{
+            BackgroundColor = Color.White;
 			Grid grid = new Grid
             {
                 RowSpacing = 0,

@@ -12,6 +12,7 @@ namespace LayoutLab
         Slider blueSlider;
 		public SliderGridPage()
 		{
+            BackgroundColor = Color.White;
 			Style labelStyle = new Style(typeof(Label))
             {
                 Setters =

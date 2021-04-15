@@ -7,6 +7,7 @@ namespace LayoutLab
 	{
         public CalculatorPage()
 		{
+			BackgroundColor = Color.White;
             Style plainButton = new Style(typeof(Button))
 			{
 				Setters =

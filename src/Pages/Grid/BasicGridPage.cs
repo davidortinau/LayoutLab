@@ -7,9 +7,9 @@ namespace LayoutLab
 	{
 		public BasicGridPage()
 		{
+            BackgroundColor = Color.White;
 			Grid grid = new Grid
             {
-				BackgroundColor = Color.Tan,
                 RowDefinitions =
                 {
                     new RowDefinition { Height = new GridLength(2, GridUnitType.Star) },
