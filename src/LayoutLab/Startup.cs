@@ -9,7 +9,7 @@ namespace LayoutLab
 		public void Configure(IAppHostBuilder appBuilder)
 		{
 			appBuilder
-				.UseFormsCompatibility(false)
+				.UseFormsCompatibility(true)
 				#if __ANDROID__
 				.ConfigureMauiHandlers(handlers => {
 					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.BoxView), 

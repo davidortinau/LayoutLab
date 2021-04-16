@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ProjectReunion" Version="0.5.0" />
+    <PackageReference Include="Microsoft.ProjectReunion.Foundation" Version="0.5.0" />
+    <PackageReference Include="Microsoft.ProjectReunion.WinUI" Version="0.5.0" />
+    <PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.3.315" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="6.0.100-preview.3.315" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="6.0.100-preview.3.315" />
+    <PackageReference Include="Microsoft.Maui.Resizetizer" Version="6.0.100-preview.3.315" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\LayoutLab\App.cs" Link="App.cs" />
+    <Compile Include="..\LayoutLab\Converters\DoubleToIntConverter.cs" Link="Converters\DoubleToIntConverter.cs" />
+    <Compile Include="..\LayoutLab\MainPage.cs" Link="MainPage.cs" />
+    <Compile Include="..\LayoutLab\MainWindow.cs" Link="MainWindow.cs" />
+    <Compile Include="..\LayoutLab\Pages\Grid\AlignmentGridPage.cs" Link="Pages\AlignmentGridPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Grid\BasicGridPage.cs" Link="Pages\BasicGridPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Grid\CalculatorPage.cs" Link="Pages\CalculatorPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Grid\SliderGridPage.cs" Link="Pages\SliderGridPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Grid\SpacingGridPage.cs" Link="Pages\SpacingGridPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Stack\AlignmentStackPage.cs" Link="Pages\AlignmentStackPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Stack\CombinedStackPage.cs" Link="Pages\CombinedStackPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Stack\ExpansionStackPage.cs" Link="Pages\ExpansionStackPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Stack\HorizontalStackPage.cs" Link="Pages\HorizontalStackPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Stack\SpacingStackPage.cs" Link="Pages\SpacingStackPage.cs" />
+    <Compile Include="..\LayoutLab\Pages\Stack\VerticalStackPage.cs" Link="Pages\VerticalStackPage.cs" />
+    <Compile Include="..\LayoutLab\Startup.cs" Link="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <MauiImage Include="..\LayoutLab\Resources\AppIcons\appicon.svg" Link="Resources\AppIcons\appicon.svg" />
+    <MauiImage Include="..\LayoutLab\Resources\AppIcons\appiconfg.svg" Link="Resources\AppIcons\appiconfg.svg" />
+    <MauiImage Include="..\LayoutLab\Resources\Images\dotnet_bot.svg" Link="Resources\Images\dotnet_bot.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+</Project>
