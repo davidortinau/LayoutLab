@@ -9,21 +9,23 @@ namespace LayoutLab
 		public void Configure(IAppHostBuilder appBuilder)
 		{
 			appBuilder
-				.UseFormsCompatibility(true)
+				.UseFormsCompatibility(false)
 				#if __ANDROID__
 				.ConfigureMauiHandlers(handlers => {
 					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.BoxView), 
-					typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.BoxRenderer));
+						typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.BoxRenderer));
 					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.Frame), 
-					typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.FastRenderers.FrameRenderer));	
+						typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.FastRenderers.FrameRenderer));	
 				})
 				#endif
 				#if __IOS__
 				.ConfigureMauiHandlers(handlers => {
 					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.BoxView), 
-					typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.BoxRenderer));
+						typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.BoxRenderer));
 					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.Frame), 
-					typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.FrameRenderer));
+						typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.FrameRenderer));
+					handlers.AddCompatibilityRenderer(typeof(Microsoft.Maui.Controls.ScrollView), 
+						typeof(Microsoft.Maui.Controls.Compatibility.Platform.iOS.ScrollViewRenderer));
 				})
 				#endif
 				.UseMauiApp<App>();

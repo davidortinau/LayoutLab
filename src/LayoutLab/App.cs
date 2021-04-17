@@ -9,7 +9,7 @@ namespace LayoutLab
 		{
 			Microsoft.Maui.Controls.Compatibility.Forms.Init(activationState);
 			return new MainWindow{
-				Page = new VerticalStackPage()
+				Page = new BugSweeper.BugSweeperPage()
 			};
 		}		
 	}
