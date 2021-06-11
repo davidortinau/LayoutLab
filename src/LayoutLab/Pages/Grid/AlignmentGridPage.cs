@@ -1,9 +1,10 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace LayoutLab
-{	public class AlignmentGridPage : ContentPage, IPage
+{	public class AlignmentGridPage : ContentPage
 	{
         RowDefinition CreateRow()
         {
@@ -22,7 +23,8 @@ namespace LayoutLab
         }
 		public AlignmentGridPage()
 		{
-            BackgroundColor = Color.White;
+            BackgroundColor = Colors.White;
+            Title = "Alignment";
 
 			Grid grid = new Grid
             {
@@ -45,7 +47,7 @@ namespace LayoutLab
             // Row 0
             grid.Children.Add(new BoxView
             {
-                Color = Color.AliceBlue
+                Color = Colors.AliceBlue
             });
             grid.Children.Add(new Label
             {
@@ -56,7 +58,7 @@ namespace LayoutLab
 
             grid.Children.Add(new BoxView
             {
-                Color = Color.LightSkyBlue
+                Color = Colors.LightSkyBlue
             }, 1, 0);
             grid.Children.Add(new Label
             {
@@ -67,7 +69,7 @@ namespace LayoutLab
 
             grid.Children.Add(new BoxView
             {
-                Color = Color.CadetBlue
+                Color = Colors.CadetBlue
             }, 2, 0);
             grid.Children.Add(new Label
             {
@@ -79,7 +81,7 @@ namespace LayoutLab
             // Row 1
             grid.Children.Add(new BoxView
             {
-                Color = Color.CornflowerBlue
+                Color = Colors.CornflowerBlue
             }, 0, 1);
             grid.Children.Add(new Label
             {
@@ -90,7 +92,7 @@ namespace LayoutLab
 
             grid.Children.Add(new BoxView
             {
-                Color = Color.DodgerBlue
+                Color = Colors.DodgerBlue
             }, 1, 1);
             grid.Children.Add(new Label
             {
@@ -101,7 +103,7 @@ namespace LayoutLab
 
             grid.Children.Add(new BoxView
             {
-                Color = Color.DarkSlateBlue
+                Color = Colors.DarkSlateBlue
             }, 2, 1);
             grid.Children.Add(new Label
             {
@@ -113,7 +115,7 @@ namespace LayoutLab
             // Row 2
             grid.Children.Add(new BoxView
             {
-                Color = Color.SteelBlue
+                Color = Colors.SteelBlue
             }, 0, 2);
             grid.Children.Add(new Label
             {
@@ -124,7 +126,7 @@ namespace LayoutLab
 
             grid.Children.Add(new BoxView
             {
-                Color = Color.LightBlue
+                Color = Colors.LightBlue
             }, 1, 2);
             grid.Children.Add(new Label
             {
@@ -135,7 +137,7 @@ namespace LayoutLab
 
             grid.Children.Add(new BoxView
             {
-                Color = Color.BlueViolet
+                Color = Colors.BlueViolet
             }, 2, 2);
             grid.Children.Add(new Label
             {
@@ -147,8 +149,5 @@ namespace LayoutLab
 
 			this.Content = grid;
 		}
-
-		// public IView View { get;set; }
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }

@@ -1,13 +1,16 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace LayoutLab
-{	public class BasicGridPage : ContentPage, IPage
+{	public class BasicGridPage : ContentPage
 	{
 		public BasicGridPage()
 		{
-            BackgroundColor = Color.White;
+            BackgroundColor = Colors.White;
+            Title="Basic Grid";
+
 			Grid grid = new Grid
             {
                 RowDefinitions =
@@ -28,7 +31,7 @@ namespace LayoutLab
             // Grid.Children collection to get default row and column settings.
             grid.Children.Add(new BoxView
             {
-                Color = Color.Green
+                Color = Colors.Green
             });
             grid.Children.Add(new Label
             {
@@ -41,7 +44,7 @@ namespace LayoutLab
             // to the Add method. 
             grid.Children.Add(new BoxView
             {
-                Color = Color.Blue
+                Color = Colors.Blue
             }, 1, 0);
             grid.Children.Add(new Label
             {
@@ -55,7 +58,7 @@ namespace LayoutLab
             // to the Add method overload.
             grid.Children.Add(new BoxView
             {
-                Color = Color.Teal
+                Color = Colors.Teal
             }, 0, 1, 1, 2);
             grid.Children.Add(new Label
             {
@@ -67,7 +70,7 @@ namespace LayoutLab
 
             grid.Children.Add(new BoxView
             {
-                Color = Color.Purple
+                Color = Colors.Purple
             }, 1, 2, 1, 2);
             grid.Children.Add(new Label
             {
@@ -79,7 +82,7 @@ namespace LayoutLab
             // Row 2
             // Alternatively, the BoxView and Label can be positioned in cells with the Grid.SetRow
             // and Grid.SetColumn methods.
-            BoxView boxView = new BoxView { Color = Color.Red };
+            BoxView boxView = new BoxView { Color = Colors.Red };
             Grid.SetRow(boxView, 2);
             Grid.SetColumnSpan(boxView, 2);
             Label label = new Label
@@ -98,20 +101,17 @@ namespace LayoutLab
             //     {
             //         WidthRequest = 300,
             //         HeightRequest = 300,
-            //         BackgroundColor = Color.Red,
+            //         BackgroundColor = Colors.Red,
             //         HorizontalOptions = LayoutOptions.Start,
             //         VerticalOptions = LayoutOptions.Start
             //     };
             //     grid.Children.Add(new Grid(){
-            //         BackgroundColor = Color.Blue,
+            //         BackgroundColor = Colors.Blue,
             //         HorizontalOptions = LayoutOptions.Fill,
             //         VerticalOptions = LayoutOptions.Fill
             //     });
 
-			this.Content = grid;
+            this.Content = grid;
 		}
-
-		// public IView View { get;set; }
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }

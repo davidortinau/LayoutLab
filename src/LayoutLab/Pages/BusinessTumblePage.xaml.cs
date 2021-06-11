@@ -6,7 +6,7 @@ using Microsoft.Maui.Controls;
 
 namespace LayoutLab
 {
-	public partial class BusinessTumblePage : ContentPage, IPage
+	public partial class BusinessTumblePage : ContentPage
 	{
 		public BusinessTumblePage ()
 		{
@@ -16,8 +16,6 @@ namespace LayoutLab
 		public override string ToString(){
 			return this.Title;
 		}
-
-		public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }
 

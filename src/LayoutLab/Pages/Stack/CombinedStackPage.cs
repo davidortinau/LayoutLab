@@ -1,13 +1,14 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace LayoutLab
-{	public class CombinedStackPage : ContentPage, IPage
+{	public class CombinedStackPage : ContentPage
 	{
 		public CombinedStackPage()
 		{
-            BackgroundColor = Color.White;
+            BackgroundColor = Colors.White;
 			this.Content = new StackLayout
             {
                 Margin = new Thickness(20),
@@ -16,7 +17,7 @@ namespace LayoutLab
                     new Label { Text = "Primary colors" },
                     new Frame
                     {
-                        BorderColor = Color.Black,
+                        BorderColor = Colors.Black,
                         Padding = new Thickness(5),
                         Content = new StackLayout
                         {
@@ -24,14 +25,14 @@ namespace LayoutLab
                             Spacing = 15,
                             Children =
                             {
-                                new BoxView { Color = Color.Red },
+                                new BoxView { Color = Colors.Red },
                                 new Label { Text = "Red", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
                     new Frame
                     {
-                        BorderColor = Color.Black,
+                        BorderColor = Colors.Black,
                         Padding = new Thickness(5),
                         Content = new StackLayout
                         {
@@ -39,14 +40,14 @@ namespace LayoutLab
                             Spacing = 15,
                             Children =
                             {
-                                new BoxView { Color = Color.Yellow },
+                                new BoxView { Color = Colors.Yellow },
                                 new Label { Text = "Yellow", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
                     new Frame
                     {
-                        BorderColor = Color.Black,
+                        BorderColor = Colors.Black,
                         Padding = new Thickness(5),
                         Content = new StackLayout
                         {
@@ -54,7 +55,7 @@ namespace LayoutLab
                             Spacing = 15,
                             Children =
                             {
-                                new BoxView { Color = Color.Blue },
+                                new BoxView { Color = Colors.Blue },
                                 new Label { Text = "Blue", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
                             }
                         }
@@ -62,7 +63,7 @@ namespace LayoutLab
                     new Label { Text = "Secondary colors" },
                     new Frame
                     {
-                        BorderColor = Color.Black,
+                        BorderColor = Colors.Black,
                         Padding = new Thickness(5),
                         Content = new StackLayout
                         {
@@ -70,14 +71,14 @@ namespace LayoutLab
                             Spacing = 15,
                             Children =
                             {
-                                new BoxView { Color = Color.Green },
+                                new BoxView { Color = Colors.Green },
                                 new Label { Text = "Green", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
                     new Frame
                     {
-                        BorderColor = Color.Black,
+                        BorderColor = Colors.Black,
                         Padding = new Thickness(5),
                         Content = new StackLayout
                         {
@@ -85,14 +86,14 @@ namespace LayoutLab
                             Spacing = 15,
                             Children =
                             {
-                                new BoxView { Color = Color.Orange },
+                                new BoxView { Color = Colors.Orange },
                                 new Label { Text = "Orange", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
                     new Frame
                     {
-                        BorderColor = Color.Black,
+                        BorderColor = Colors.Black,
                         Padding = new Thickness(5),
                         Content = new StackLayout
                         {
@@ -100,7 +101,7 @@ namespace LayoutLab
                             Spacing = 15,
                             Children =
                             {
-                                new BoxView { Color = Color.Purple },
+                                new BoxView { Color = Colors.Purple },
                                 new Label { Text = "Purple", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
                             }
                         }
@@ -108,8 +109,5 @@ namespace LayoutLab
                 }
             };
 		}
-
-		//public IView View { get;set; }
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }
