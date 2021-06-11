@@ -8,9 +8,8 @@ using Microsoft.Maui.Controls;
 
 namespace BugSweeper
 {
-    public partial class BugSweeperPage : ContentPage, IPage
+    public partial class BugSweeperPage : ContentPage
     {
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 
         const string timeFormat = @"%m\:ss";
 

@@ -1,19 +1,21 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace LayoutLab
-{	public class CalculatorPage : ContentPage, IPage
+{	public class CalculatorPage : ContentPage
 	{
         public CalculatorPage()
 		{
-			BackgroundColor = Color.White;
+			Title = "Calculator";
+			BackgroundColor = Colors.White;
             Style plainButton = new Style(typeof(Button))
 			{
 				Setters =
                 {
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#eee") },
-					new Setter { Property = Button.TextColorProperty, Value = Color.Black },
+					new Setter { Property = Button.TextColorProperty, Value = Colors.Black },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
 				}
@@ -24,7 +26,7 @@ namespace LayoutLab
 				Setters =
                 {
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#ddd") },
-					new Setter { Property = Button.TextColorProperty, Value = Color.Black },
+					new Setter { Property = Button.TextColorProperty, Value = Colors.Black },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
 				}
@@ -35,7 +37,7 @@ namespace LayoutLab
 				Setters =
                 {
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#E8AD00") },
-					new Setter { Property = Button.TextColorProperty, Value = Color.White },
+					new Setter { Property = Button.TextColorProperty, Value = Colors.White },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
 				}
@@ -60,7 +62,7 @@ namespace LayoutLab
 				Text = "0",
 				HorizontalTextAlignment = TextAlignment.End,
 				VerticalTextAlignment = TextAlignment.End,
-				TextColor = Color.White,
+				TextColor = Colors.White,
 				FontSize = 60
 			};
 
@@ -94,8 +96,5 @@ namespace LayoutLab
 			
             this.Content = grid;
 		}
-
-		// public IView View { get;set; }
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }

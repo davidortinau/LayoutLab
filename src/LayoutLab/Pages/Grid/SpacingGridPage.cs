@@ -1,13 +1,16 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace LayoutLab
-{	public class SpacingGridPage : ContentPage, IPage
+{	public class SpacingGridPage : ContentPage
 	{
 		public SpacingGridPage()
 		{
-            BackgroundColor = Color.White;
+            BackgroundColor = Colors.White;
+            Title = "Spacing";
+
 			Grid grid = new Grid
             {
                 RowSpacing = 0,
@@ -28,7 +31,7 @@ namespace LayoutLab
             // Row 0
             grid.Children.Add(new BoxView
             {
-                Color = Color.Green
+                Color = Colors.Green
             });
             grid.Children.Add(new Label
             {
@@ -38,7 +41,7 @@ namespace LayoutLab
             });
             grid.Children.Add(new BoxView
             {
-                Color = Color.Blue
+                Color = Colors.Blue
             }, 1, 0);
             grid.Children.Add(new Label
             {
@@ -50,7 +53,7 @@ namespace LayoutLab
             // Row 1
             grid.Children.Add(new BoxView
             {
-                Color = Color.Teal
+                Color = Colors.Teal
             }, 0, 1, 1, 2);
             grid.Children.Add(new Label
             {
@@ -60,7 +63,7 @@ namespace LayoutLab
             }, 0, 1, 1, 2);
             grid.Children.Add(new BoxView
             {
-                Color = Color.Purple
+                Color = Colors.Purple
             }, 1, 2, 1, 2);
             grid.Children.Add(new Label
             {
@@ -70,7 +73,7 @@ namespace LayoutLab
             }, 1, 2, 1, 2);
 
             // Row 2
-            BoxView boxView = new BoxView { Color = Color.Red };
+            BoxView boxView = new BoxView { Color = Colors.Red };
             Grid.SetRow(boxView, 2);
             Grid.SetColumnSpan(boxView, 2);
             Label label = new Label
@@ -87,8 +90,5 @@ namespace LayoutLab
 
 			this.Content = grid;
 		}
-
-		// public IView View { get;set; }
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }

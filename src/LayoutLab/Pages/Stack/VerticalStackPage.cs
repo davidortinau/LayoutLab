@@ -1,31 +1,29 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace LayoutLab
-{	public class VerticalStackPage : ContentPage, IPage
+{	public class VerticalStackPage : ContentPage
 	{
 		public VerticalStackPage()
 		{
-            BackgroundColor = Color.White;
+            BackgroundColor = Colors.White;
 			this.Content = new StackLayout
             {
                 Margin = new Thickness(20),
                 Children =
                 {
                     new Label { Text = "Primary colors" },
-                    new BoxView { Color = Color.Red },
-                    new BoxView { Color = Color.Yellow },
-                    new BoxView { Color = Color.Blue },
+                    new BoxView { Color = Colors.Red },
+                    new BoxView { Color = Colors.Yellow },
+                    new BoxView { Color = Colors.Blue },
                     new Label { Text = "Secondary colors" },
-                    new BoxView { Color = Color.Green },
-                    new BoxView { Color = Color.Orange },
-                    new BoxView { Color = Color.Purple }
+                    new BoxView { Color = Colors.Green },
+                    new BoxView { Color = Colors.Orange },
+                    new BoxView { Color = Colors.Purple }
                 }
             };
 		}
-
-		//public IView View { get;set; }
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }

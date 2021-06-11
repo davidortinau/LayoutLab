@@ -5,6 +5,7 @@ using System;
 using System.Reflection;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace BugSweeper
 {
@@ -41,14 +42,14 @@ namespace BugSweeper
             this.Row = row;
             this.Col = col;
 
-            this.BackgroundColor = Color.Yellow;
-            this.BorderColor = Color.Blue;
+            this.BackgroundColor = Colors.Yellow;
+            this.BorderColor = Colors.Blue;
             this.Padding = 2;
 
             label = new Label {
                 Text = " ",
-                TextColor = Color.Yellow,
-                BackgroundColor = Color.Blue,
+                TextColor = Colors.Yellow,
+                BackgroundColor = Colors.Blue,
                 HorizontalTextAlignment = TextAlignment.Center,
                 VerticalTextAlignment = TextAlignment.Center,
             };

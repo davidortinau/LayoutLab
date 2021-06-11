@@ -2,9 +2,10 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using LayoutLab.Converters;
+using Microsoft.Maui.Graphics;
 
 namespace LayoutLab
-{	public class SliderGridPage : ContentPage, IPage
+{	public class SliderGridPage : ContentPage
 	{
         BoxView boxView;
         Slider redSlider;
@@ -12,7 +13,9 @@ namespace LayoutLab
         Slider blueSlider;
 		public SliderGridPage()
 		{
-            BackgroundColor = Color.White;
+            BackgroundColor = Colors.White;
+            Title = "Slider";
+
 			Style labelStyle = new Style(typeof(Label))
             {
                 Setters =
@@ -32,7 +35,7 @@ namespace LayoutLab
                 }
             };
 
-            boxView = new BoxView { Color = Color.Black };
+            boxView = new BoxView { Color = Colors.Black };
             rootGrid.Children.Add(boxView);
 
             // Child page layout
@@ -96,10 +99,7 @@ namespace LayoutLab
 
         void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
-            boxView.Color = new Color(redSlider.Value, greenSlider.Value, blueSlider.Value);
+            boxView.Color = new Color((float)redSlider.Value, (float)greenSlider.Value, (float)blueSlider.Value);
         }
-
-		// public IView View { get;set; }
-        public IView View { get => (IView)Content; set => Content = (View)value; }
 	}
 }
