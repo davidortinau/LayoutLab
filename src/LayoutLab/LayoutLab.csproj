@@ -40,7 +40,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.5.4185" />
+		<PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.5.*" />
 	</ItemGroup>
 
 	<PropertyGroup>

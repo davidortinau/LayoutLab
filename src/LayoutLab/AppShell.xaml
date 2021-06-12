@@ -74,4 +74,35 @@
     <FlyoutItem Title="Flex Stack">
         <ShellContent ContentTemplate="{DataTemplate app:SimpleStackPage}"/>
     </FlyoutItem>
+
+    <!-- Absolute -->
+    <FlyoutItem Title="Absolute Bouncing Text">
+        <ShellContent ContentTemplate="{DataTemplate app:BouncingTextDemoPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Absolute Chessboard">
+        <ShellContent ContentTemplate="{DataTemplate app:ChessboardDemoPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Absolute Proportional Cal">
+        <ShellContent ContentTemplate="{DataTemplate app:ProportionalCoordinateCalcDemoPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Absolute Proportional">
+        <ShellContent ContentTemplate="{DataTemplate app:ProportionalDemoPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Absolute Simple Overlap">
+        <ShellContent ContentTemplate="{DataTemplate app:SimpleOverlayDemoPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Absolute Stylish Header">
+        <ShellContent ContentTemplate="{DataTemplate app:StylishHeaderDemoPage}"/>
+    </FlyoutItem>
+
+    <!-- Relative -->
+    <FlyoutItem Title="Relative Position and Size">
+        <ShellContent ContentTemplate="{DataTemplate app:RelativePositioningAndSizingDemoPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Relative Simple Overlay">
+        <ShellContent ContentTemplate="{DataTemplate app:RelativeSimpleOverlayDemoPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Relative Stylish Header">
+        <ShellContent ContentTemplate="{DataTemplate app:RelativeStylishHeaderDemoPage}"/>
+    </FlyoutItem>
 </Shell>
